@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="inverted_pendulum">
+    <compiler angle="radian" meshdir="meshes" autolimits="true" />
+    <option timestep="0.002" gravity="0 0 -9.81" integrator="implicitfast" />
+
+    <visual>
+        <!-- 质量 -->
+        <quality shadowsize="16384" numslices="28" offsamples="4" />
+        <headlight diffuse="1 1 1" specular="0.5 0.5 0.5" active="1" />
+    </visual>
+
+    <asset>
+        <texture name="plane" type="2d" builtin="checker" rgb1=".1 .1 .1" rgb2=".9 .9 .9"
+            width="512" height="512" mark="cross" markrgb=".8 .8 .8" />
+        <material name="plane" reflectance="0.3" texture="plane" texrepeat="1 1" texuniform="true" />
+    </asset>
+    <!-- 这里要使用绝对路径  Absolute path-->
+    <include file="/home/crazy_dog/jason-ws/wheel_legged_robot/wheel_legged_genesis/assets/wheel_legged_urdf/biped_wheel_motor_test.xml"/>
+    <!-- <include file="/home/jason-ws/wheel_legged_robot/wheel_legged_genesis/assets/mjcf/urdf2nz/urdf2nz.xml"/> -->
+    <worldbody>
+        <geom name="floor" pos="0 0 0" size="0 0 .25" type="plane" material="plane"
+            condim="3" />
+        <light directional="true" ambient=".3 .3 .3" pos="30 30 30" dir="0 -0.5 -1"
+            diffuse="0.5 0.5 0.5" specular="0.5 0.5 0.5" />
+       
+    </worldbody>
+</mujoco>

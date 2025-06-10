@@ -40,15 +40,15 @@ install rsl-rl:
 ## Use
 ### use pdm
 test:  
-`pdm run locomotion/wheel_legged_eval.py`  
+`pdm run quick_wheel_legged/wheel_legged_eval.py`  
 train:  
-`pdm run locomotion/wheel_legged_train.py`  
+`pdm run quick_wheel_legged/wheel_legged_train.py`  
 
 ### or manual
 test:  
-`python locomotion/wheel_legged_eval.py`  
+`python quick_wheel_legged/wheel_legged_eval.py`  
 train:  
-`python locomotion/wheel_legged_train.py`  
+`python quick_wheel_legged/wheel_legged_train.py`  
 
 ### gamepad & keyboard
 **gamepad**  

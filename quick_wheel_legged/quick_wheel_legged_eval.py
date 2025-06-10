@@ -18,7 +18,7 @@ import copy
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-e", "--exp_name", type=str, default="quick_wheel-legged-walking-v14")
+    parser.add_argument("-e", "--exp_name", type=str, default="quick_wheel-legged-walking-v13")
     parser.add_argument("--ckpt", type=int, default=8000)
     args = parser.parse_args()
 
